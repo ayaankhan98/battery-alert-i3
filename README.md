@@ -8,6 +8,6 @@ any alert on low battery.
 ## Usage
 ```
 $ chmod +x setup.sh
-$ ./setup.sh
+$ sudo ./setup.sh
 ```
 An alert notification will be thrown if battery status is less than 15%
