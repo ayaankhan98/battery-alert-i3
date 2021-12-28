@@ -12,6 +12,7 @@ echo "Copying alert script"
 cp ./battery-alert.sh /usr/local/bin/battery-alert/battery-alert.sh
 echo "Copying notification sound"
 cp ./low-battery.wav /usr/local/bin/battery-alert/low-battery.wav
+cp ./full-battery.wav /usr/local/bin/battery-alert/full-battery.wav
 
 echo "Enabling services"
 systemctl --user daemon-reload
