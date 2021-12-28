@@ -14,4 +14,11 @@ then
     "Low Battery"\
     "Remaning - ${capacity}%"
   canberra-gtk-play -f "/usr/local/bin/battery-alert/low-battery.wav"
+elif [[ "${battery_status}"=="Charging" && ${capacity} -eq 100 ]];
+then
+  echo "Battery Full - ${capacity}%"
+  notify-send \
+    "Full Charged - ${capacity}%"\
+    "Remove Charging Adapter"
+  canberra-gtk-play -f "/usr/local/bin/battery-alert/full-battery.wav"
 fi
