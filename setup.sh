@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "Setting up dirs"
-mkdir -p ~/.config/systemd/user/
+mkdir -p $HOME/.config/systemd/user/
 mkdir -p /usr/local/bin/battery-alert
 
 echo "Copying service and timers"
@@ -19,6 +19,6 @@ systemctl --user daemon-reload
 systemctl --user start battery-alert.service
 
 systemctl --user start battery-alert.timer
-systemctl --user enable battery-alert.timers
+systemctl --user enable battery-alert.timer
 
 echo "exiting..."
